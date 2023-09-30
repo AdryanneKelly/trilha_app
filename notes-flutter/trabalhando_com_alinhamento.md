@@ -135,8 +135,8 @@ return SafeArea(
 
 Antes: 
 
-
 ![Sem_safearea.png](Imagens/Sem_safearea.png)
+
 Depois:
 
 ![com_safearea.png](Imagens/com_safearea.png)
