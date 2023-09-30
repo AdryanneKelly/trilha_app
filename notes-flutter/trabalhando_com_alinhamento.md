@@ -89,7 +89,7 @@ O Expanded vai ocupar o maior espaço que ele puder em uma linha neste caso, o c
 
 Ficando da seguinte forma: 
 
-![[Expanded_example.png]]
+![Expanded_example.png](Imagens/Expanded_example.png)
 
 
 ### **SizedBox**
@@ -136,8 +136,8 @@ return SafeArea(
 Antes: 
 
 
-![[Sem_safearea.png]]
+![Sem_safearea.png](Imagens/Sem_safearea.png)
 Depois:
 
-![[com_safearea.png]]
+![com_safearea.png](Imagens/com_safearea.png)
 
