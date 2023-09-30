@@ -30,11 +30,53 @@ class _HomePageState extends State<HomePage> {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text("Ações do usuário", style: GoogleFonts.acme(fontSize: 20)),
-            Text("Você clicou no botão $quantidadeDeCliques vezes",
-                style: GoogleFonts.acme(fontSize: 20)),
-            Text("O número gerado foi: $numeroGerado",
-                style: GoogleFonts.acme(fontSize: 20)),
+            SizedBox(
+              width: 200,
+              height: 100,
+              child: Container(
+                  color: Colors.green,
+                  child: Text("Ações do usuário",
+                      style: GoogleFonts.acme(fontSize: 20))),
+            ),
+            Container(
+              width: 200,
+              height: 100,
+              color: Colors.blue,
+              child: Text("Você clicou no botão $quantidadeDeCliques vezes",
+                  style: GoogleFonts.acme(fontSize: 20)),
+            ),
+            Container(
+              color: Colors.purple,
+              child: Text("O número gerado foi: $numeroGerado",
+                  style: GoogleFonts.acme(fontSize: 20)),
+            ),
+            Container(
+              color: Colors.black,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Expanded(
+                    flex: 2,
+                    child: Container(
+                        color: Colors.red,
+                        child:
+                            Text("10", style: GoogleFonts.acme(fontSize: 20))),
+                  ),
+                  Expanded(
+                    child: Container(
+                        color: Colors.orange,
+                        child:
+                            Text("20", style: GoogleFonts.acme(fontSize: 20))),
+                  ),
+                  Expanded(
+                    child: Container(
+                        color: Colors.yellow,
+                        child:
+                            Text("30", style: GoogleFonts.acme(fontSize: 20))),
+                  ),
+                ],
+              ),
+            )
           ],
         ),
       ),
