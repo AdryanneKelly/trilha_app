@@ -8,9 +8,17 @@ class DadosCadastraisPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: const Color.fromARGB(255, 6, 89, 212),
         title: Text(texto),
       ),
-      body: const Center(child: Text("Dados cadastrais")),
+      body: Container(
+        color: const Color.fromARGB(255, 0, 16, 37),
+        child: const Center(
+            child: Text(
+          "Dados cadastrais",
+          style: TextStyle(color: Colors.white),
+        )),
+      ),
     );
   }
 }
