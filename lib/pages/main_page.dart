@@ -48,9 +48,7 @@ class _MainPageState extends State<MainPage> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const DadosCadastraisPage(
-                                  texto: "Meus dados",
-                                )));
+                            builder: (context) => const DadosCadastraisPage()));
                   },
                 ),
                 const Divider(color: Color.fromARGB(255, 6, 89, 212)),
