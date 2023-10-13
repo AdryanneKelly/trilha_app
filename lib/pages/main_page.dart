@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:trilhaapp/pages/card_page.dart';
-import 'package:trilhaapp/pages/pagina2.dart';
-import 'package:trilhaapp/pages/pagina3.dart';
+import 'package:trilhaapp/pages/image_assets.dart';
+import 'package:trilhaapp/pages/list_view_horizontal_page.dart';
+import 'package:trilhaapp/pages/list_view_v.dart';
 import 'package:trilhaapp/shared/widgets/custom_drawer.dart';
 
 class MainPage extends StatefulWidget {
@@ -36,10 +37,16 @@ class _MainPageState extends State<MainPage> {
                     posicaoPagina = value;
                   });
                 },
-                children: const [CardPage(), Pagina2Page(), Pagina3Page()],
+                children: const [
+                  CardPage(),
+                  ImageAssetsPage(),
+                  ListViewVPage(),
+                  ListViewHorizontal()
+                ],
               ),
             ),
             BottomNavigationBar(
+                type: BottomNavigationBarType.fixed,
                 onTap: (value) {
                   pageController.jumpToPage(value);
                 },
@@ -52,7 +59,9 @@ class _MainPageState extends State<MainPage> {
                       label: "Meus livros"),
                   BottomNavigationBarItem(
                       icon: Icon(Icons.grade_outlined),
-                      label: "Metas de leitura")
+                      label: "Metas de leitura"),
+                  BottomNavigationBarItem(
+                      icon: Icon(Icons.photo), label: "Slide de imagens"),
                 ])
           ],
         ),
