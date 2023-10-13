@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:trilhaapp/pages/dados_cadastrais.dart';
-import 'package:trilhaapp/pages/pagina1.dart';
+import 'package:trilhaapp/pages/card_page.dart';
 import 'package:trilhaapp/pages/pagina2.dart';
 import 'package:trilhaapp/pages/pagina3.dart';
+import 'package:trilhaapp/shared/widgets/custom_drawer.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({super.key});
@@ -25,69 +25,7 @@ class _MainPageState extends State<MainPage> {
             "Home",
           ),
         ),
-        drawer: Drawer(
-          backgroundColor: const Color.fromARGB(255, 0, 16, 37),
-          child: Padding(
-            padding: const EdgeInsets.symmetric(vertical: 30, horizontal: 20),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                InkWell(
-                  child: Container(
-                      padding: const EdgeInsets.symmetric(vertical: 15),
-                      width: double.infinity,
-                      child: const Text(
-                        "Dados cadastrais",
-                        style: TextStyle(
-                            color: Colors.white70,
-                            fontSize: 17,
-                            fontWeight: FontWeight.bold),
-                      )),
-                  onTap: () {
-                    Navigator.pop(context);
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const DadosCadastraisPage()));
-                  },
-                ),
-                const Divider(color: Color.fromARGB(255, 6, 89, 212)),
-                InkWell(
-                  child: Container(
-                      padding: const EdgeInsets.symmetric(vertical: 15),
-                      width: double.infinity,
-                      child: const Text(
-                        "Configurações",
-                        style: TextStyle(
-                            color: Colors.white70,
-                            fontSize: 17,
-                            fontWeight: FontWeight.bold),
-                      )),
-                  onTap: () {},
-                ),
-                const Divider(
-                  color: Color.fromARGB(255, 6, 89, 212),
-                ),
-                // const SizedBox(
-                //   height: 10,
-                // ),
-                InkWell(
-                  child: Container(
-                      padding: const EdgeInsets.symmetric(vertical: 15),
-                      width: double.infinity,
-                      child: const Text(
-                        "Termos de uso e privacidade",
-                        style: TextStyle(
-                            color: Colors.white70,
-                            fontSize: 17,
-                            fontWeight: FontWeight.bold),
-                      )),
-                  onTap: () {},
-                ),
-              ],
-            ),
-          ),
-        ),
+        drawer: const CustomDrawerWidget(),
         body: Column(
           children: [
             Expanded(
@@ -98,7 +36,7 @@ class _MainPageState extends State<MainPage> {
                     posicaoPagina = value;
                   });
                 },
-                children: const [Pagina1Page(), Pagina2Page(), Pagina3Page()],
+                children: const [CardPage(), Pagina2Page(), Pagina3Page()],
               ),
             ),
             BottomNavigationBar(
