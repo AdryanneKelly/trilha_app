@@ -1,3 +1,4 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/widgets.dart';
 
 class Tarefa {
@@ -7,23 +8,21 @@ class Tarefa {
 
   Tarefa(this._descricao, this._concluido);
 
-  String getId() {
-    return _id;
-  }
+  String get id => _id;
+  String get descricao => _descricao;
 
-  String getDescricao() {
-    return _descricao;
-  }
-
-  void setDescricao(String descricao) {
+  set descricao(String descricao) {
     _descricao = descricao;
   }
 
-  bool getConcuido() {
-    return _concluido;
-  }
+  bool get concluido => _concluido;
 
-  void setConcluido(bool concluido) {
+
+  void set concluido(bool concluido) {
     _concluido = concluido;
   }
+
+  @override
+  String toString() =>
+      'Tarefa(_descricao: $_descricao, _concluido: $_concluido)';
 }

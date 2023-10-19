@@ -14,8 +14,13 @@ class _ListViewVPageState extends State<ListViewVPage> {
     return ListView(
       children: [
         ListTile(
-          leading: Image.asset(AppImages.profile2),
-          title: const Text("Fulaninha"),
+          leading: CircleAvatar(
+            backgroundImage: AssetImage(AppImages.profile1),
+          ),
+          title: const Text(
+            "Cafetão",
+            style: TextStyle(fontWeight: FontWeight.bold),
+          ),
           subtitle: const Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -49,23 +54,99 @@ class _ListViewVPageState extends State<ListViewVPage> {
           textColor: Colors.white,
           isThreeLine: true,
         ),
-        Image.asset(AppImages.profile1),
-        Image.asset(
-          AppImages.profile2,
+        ListTile(
+          leading: CircleAvatar(
+            backgroundImage: AssetImage(AppImages.profile2),
+          ),
+          title: const Text(
+            "Esposa",
+            style: TextStyle(fontWeight: FontWeight.bold),
+          ),
+          subtitle: const Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text("Mas como assim vc não vai\nvir hoje?"),
+              Text(
+                "8:23",
+                style: TextStyle(color: Colors.white60),
+              ),
+            ],
+          ),
+          trailing: PopupMenuButton<String>(
+            color: Colors.white,
+            onSelected: (menu) {},
+            itemBuilder: (context) {
+              return <PopupMenuEntry<String>>[
+                const PopupMenuItem<String>(
+                  value: "opcao1",
+                  child: Text("Opção 1"),
+                ),
+                const PopupMenuItem<String>(
+                  value: "opcao2",
+                  child: Text("Opção 2"),
+                ),
+                const PopupMenuItem<String>(
+                  value: "opcao3",
+                  child: Text("Opção 3"),
+                ),
+              ];
+            },
+          ),
+          textColor: Colors.white,
+          isThreeLine: true,
         ),
-        Image.asset(
-          AppImages.profile3,
+        ListTile(
+          leading: CircleAvatar(
+            backgroundImage: AssetImage(AppImages.profile3),
+          ),
+          title: const Text(
+            "Veterinária",
+            style: TextStyle(fontWeight: FontWeight.bold),
+          ),
+          subtitle: const Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text("Fizemos um churras com seu\ngato"),
+              Text(
+                "8:16",
+                style: TextStyle(color: Colors.white60),
+              ),
+            ],
+          ),
+          trailing: PopupMenuButton<String>(
+            color: Colors.white,
+            onSelected: (menu) {},
+            itemBuilder: (context) {
+              return <PopupMenuEntry<String>>[
+                const PopupMenuItem<String>(
+                  value: "opcao1",
+                  child: Text("Opção 1"),
+                ),
+                const PopupMenuItem<String>(
+                  value: "opcao2",
+                  child: Text("Opção 2"),
+                ),
+                const PopupMenuItem<String>(
+                  value: "opcao3",
+                  child: Text("Opção 3"),
+                ),
+              ];
+            },
+          ),
+          textColor: Colors.white,
+          isThreeLine: true,
         ),
-        Image.asset(
-          AppImages.paisagemVetor1,
-          width: double.infinity,
-        ),
-        Image.asset(
-          AppImages.paisagemVetor2,
-        ),
-        Image.asset(
-          AppImages.paisagemVetor3,
-        ),
+
+        // Image.asset(
+        //   AppImages.paisagemVetor1,
+        //   width: double.infinity,
+        // ),
+        // Image.asset(
+        //   AppImages.paisagemVetor2,
+        // ),
+        // Image.asset(
+        //   AppImages.paisagemVetor3,
+        // ),
       ],
     );
   }

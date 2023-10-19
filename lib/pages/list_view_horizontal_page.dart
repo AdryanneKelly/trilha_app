@@ -12,6 +12,7 @@ class _ListViewHorizontalState extends State<ListViewHorizontal> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color.fromARGB(255, 0, 16, 37),
       body: Column(
         children: [
           Expanded(

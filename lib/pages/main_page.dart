@@ -3,6 +3,7 @@ import 'package:trilhaapp/pages/card_page.dart';
 import 'package:trilhaapp/pages/image_assets.dart';
 import 'package:trilhaapp/pages/list_view_horizontal_page.dart';
 import 'package:trilhaapp/pages/list_view_v.dart';
+import 'package:trilhaapp/pages/tarefa_page.dart';
 import 'package:trilhaapp/shared/widgets/custom_drawer.dart';
 
 class MainPage extends StatefulWidget {
@@ -41,7 +42,8 @@ class _MainPageState extends State<MainPage> {
                   CardPage(),
                   ImageAssetsPage(),
                   ListViewVPage(),
-                  ListViewHorizontal()
+                  ListViewHorizontal(),
+                  TarefaPage()
                 ],
               ),
             ),
@@ -58,10 +60,11 @@ class _MainPageState extends State<MainPage> {
                       icon: Icon(Icons.menu_book_rounded),
                       label: "Meus livros"),
                   BottomNavigationBarItem(
-                      icon: Icon(Icons.grade_outlined),
-                      label: "Metas de leitura"),
+                      icon: Icon(Icons.chat_rounded), label: "Chat"),
                   BottomNavigationBarItem(
                       icon: Icon(Icons.photo), label: "Slide de imagens"),
+                  BottomNavigationBarItem(
+                      icon: Icon(Icons.library_books_sharp), label: "Tarefas"),
                 ])
           ],
         ),

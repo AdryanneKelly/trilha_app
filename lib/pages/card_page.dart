@@ -19,7 +19,6 @@ class _CardPageState extends State<CardPage> {
     // TODO: implement initState
     carregarDados();
     super.initState();
-    
   }
 
   void carregarDados() async {
