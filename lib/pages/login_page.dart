@@ -102,32 +102,33 @@ class _LoginPageState extends State<LoginPage> {
                       style: const TextStyle(color: Colors.white),
                       cursorColor: const Color.fromARGB(255, 6, 89, 212),
                       decoration: InputDecoration(
-                          contentPadding: const EdgeInsets.only(top: 5),
-                          enabledBorder: const UnderlineInputBorder(
-                              borderSide: BorderSide(
-                                  color: Color.fromARGB(255, 6, 89, 212))),
-                          focusedBorder: const OutlineInputBorder(
-                              borderSide: BorderSide(
-                                  color: Color.fromARGB(255, 6, 89, 212))),
-                          hintText: "Senha",
-                          hintStyle: const TextStyle(color: Colors.white60),
-                          prefixIcon: const Icon(
-                            Icons.lock_outline,
-                            color: Color.fromARGB(255, 6, 89, 212),
+                        contentPadding: const EdgeInsets.only(top: 5),
+                        enabledBorder: const UnderlineInputBorder(
+                            borderSide: BorderSide(
+                                color: Color.fromARGB(255, 6, 89, 212))),
+                        focusedBorder: const OutlineInputBorder(
+                            borderSide: BorderSide(
+                                color: Color.fromARGB(255, 6, 89, 212))),
+                        hintText: "Senha",
+                        hintStyle: const TextStyle(color: Colors.white60),
+                        prefixIcon: const Icon(
+                          Icons.lock_outline,
+                          color: Color.fromARGB(255, 6, 89, 212),
+                        ),
+                        suffixIcon: GestureDetector(
+                          onTap: () {
+                            setState(() {
+                              isObscureText = !isObscureText;
+                            });
+                          },
+                          child: Icon(
+                            isObscureText
+                                ? Icons.visibility_off_outlined
+                                : Icons.visibility_outlined,
+                            color: const Color.fromARGB(255, 80, 91, 109),
                           ),
-                          suffixIcon: GestureDetector(
-                            onTap: () {
-                              setState(() {
-                                isObscureText = !isObscureText;
-                              });
-                            },
-                            child: Icon(
-                              isObscureText
-                                  ? Icons.visibility_off_outlined
-                                  : Icons.visibility_outlined,
-                              color: const Color.fromARGB(255, 80, 91, 109),
-                            ),
-                          )),
+                        ),
+                      ),
                     )),
                 const SizedBox(
                   height: 40,

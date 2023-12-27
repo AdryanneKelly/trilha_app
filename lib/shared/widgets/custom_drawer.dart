@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:trilhaapp/pages/configuracoes_page.dart';
 import 'package:trilhaapp/pages/dados_cadastrais.dart';
 import 'package:trilhaapp/pages/login_page.dart';
+import 'package:trilhaapp/pages/numeros_aleatorios_page.dart';
 
 class CustomDrawerWidget extends StatelessWidget {
   const CustomDrawerWidget({super.key});
@@ -83,6 +85,40 @@ class CustomDrawerWidget extends StatelessWidget {
                       builder: (context) => const DadosCadastraisPage()));
             },
           ),
+          const Divider(
+            color: Color.fromARGB(255, 6, 89, 212),
+          ),
+          InkWell(
+            child: Container(
+                padding:
+                    const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
+                width: double.infinity,
+                child: const Row(
+                  children: [
+                    Icon(
+                      Icons.numbers,
+                      color: Colors.white,
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Text(
+                      "Gerador de números",
+                      style: TextStyle(
+                          color: Colors.white70,
+                          fontSize: 17,
+                          fontWeight: FontWeight.bold),
+                    ),
+                  ],
+                )),
+            onTap: () {
+              Navigator.pop(context);
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const NumerosAleatorioPage()));
+            },
+          ),
           const Divider(color: Color.fromARGB(255, 6, 89, 212)),
           InkWell(
             child: Container(
@@ -107,14 +143,17 @@ class CustomDrawerWidget extends StatelessWidget {
                     ),
                   ],
                 )),
-            onTap: () {},
+            onTap: () {
+              Navigator.pop(context);
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const ConfiguracoesPage()));
+            },
           ),
           const Divider(
             color: Color.fromARGB(255, 6, 89, 212),
           ),
-          // const SizedBox(
-          //   height: 10,
-          // ),
           InkWell(
             child: Container(
                 padding:

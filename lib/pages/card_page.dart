@@ -80,15 +80,17 @@ class _CardPageState extends State<CardPage> {
                               style: const TextStyle(fontSize: 16),
                             ),
                             Container(
-                                width: double.infinity,
-                                alignment: Alignment.centerRight,
-                                child: TextButton(
-                                    onPressed: () {},
-                                    child: const Text(
-                                      "Ler mais...",
-                                      style: TextStyle(
-                                          decoration: TextDecoration.underline),
-                                    )))
+                              width: double.infinity,
+                              alignment: Alignment.centerRight,
+                              child: TextButton(
+                                onPressed: () {},
+                                child: const Text(
+                                  "Ler mais...",
+                                  style: TextStyle(
+                                      decoration: TextDecoration.underline),
+                                ),
+                              ),
+                            ),
                           ],
                         ),
                       ),
